@@ -53,7 +53,7 @@ public class PcSetupPricing {
             if (budget >= 600 && budget < 900 ){
                 double costGpu = 330;
                 return costGpu;
-                nameOfGpu = "Four solid choices: RTX 3050, RTX 3060(if on sale), Rx 6600xt, Rx 6700xt(higher end)"
+                nameOfGpu = "Four solid choices: RTX 3050, RTX 3060(if on sale), Rx 6600xt, Rx 6700xt(higher end)";
             }
 
             if (budget >= 900 && budget < 1200){
@@ -69,10 +69,43 @@ public class PcSetupPricing {
             }
 
         }
+        else {
+           double costGPu = 80;
+           return costGPu;
+           nameOfGpu = "GT 710";
+        }
 
     }
 
     public double getCpuPrice(){
+        if (budget < 300){
+            nameOfCpu = "Budget too low";
+        }
+        if (budget < 600 && budget >= 300) {
+            double costCpu = 100;
+            return costCpu;
+            nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+
+        }
+        if (budget >= 600 && budget < 900 ){
+            double costCpu = 200;
+            return costCpu;
+            nameOfCpu = "Four solid choices: Ryzen 5 5600, Ryzen 5700x, Intel i5 12400, Ryzen 7 5700g  "
+        }
+
+        if (budget >= 900 && budget < 1200){
+            double costCpu = 300;
+            return costCpu;
+            nameOfCpu = "Two solid options: Ryzen 5 7600x, Ryzen 7 5800x, ";
+        }
+        if (budget >= 1200 ) {
+            double costCpu = 550;
+            return costCpu;
+            nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+
+        }
+        return 100;
+        nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
 
     }
 
