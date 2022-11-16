@@ -15,8 +15,13 @@ public class PcSetupPricing {
 
     private String nameOfCase;
 
+    private String nameOfRam;
+
     public PcSetupPricing(int userBudget, String setup) {
         this.budget = userBudget;
+        while(budget<300){
+            budget++;
+        }
         this.budget = this.budget - (0.04*this.budget);
 
         if(setup.equals("yes")==true || setup.equals("Yes") == true){
@@ -109,15 +114,62 @@ public class PcSetupPricing {
 
     }
 
+    public double getMotherBoard(){
+        double costMotherBoard =100;
+        nameOfMotherboard = "Ryzen Motherboards: B550(for 5000 series chips) and B450(for 3000 series chips), Intel motherboards: z790 or z690";
+        return costMotherBoard;
+    }
     public double getPowerSupplyPrice(){
-
+    double costPowerSupply = 80;
     }
 
     public double getCaseCost(){
+        if (budget < 300){
+            nameOfCpu = "Budget too low";
+        }
+        if (budget < 600 && budget >= 300) {
+            double costPower= 40;
+            return costPower;
+            nameOfPowerSupply = "500";
+
+        }
+        if (budget >= 600 && budget < 900 ){
+            double costCpu = 50;
+            return costCpu;
+            nameOfPowerSupply = "550 watt power supply"
+        }
+
+        if (budget >= 900 && budget < 1200){
+            double costCpu = 60;
+            return costCpu;
+            nameOfPowerSupply = "600 watt power supply";
+        }
+        if (budget >= 1200 ) {
+            double costCpu = 80;
+            return costCpu;
+            nameOfPowerSupply = " 750 watt powers supply(preferably high rated brands such as seasonic) ";
+
+        }
+        return 50;
+        nameOfPowerSupply = "500 watts";
 
     }
 
     public double getRamCost(){
+
+        if (budget >= 900 && budget < 1200){
+            double costCpu = 300;
+            return costCpu;
+            nameO = "Two solid options: Ryzen 5 7600x, Ryzen 7 5800x, ";
+        }
+        if (budget >= 1200 ) {
+            double costCpu = 550;
+            return costCpu;
+            nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+
+        }
+        return 100;
+        nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
 
     }
 
