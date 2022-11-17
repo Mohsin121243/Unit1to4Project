@@ -51,35 +51,36 @@ public class PcSetupPricing {
             }
             if (budget < 600 && budget >= 300) {
                 double costGpu = 125;
-                return costGpu;
                 nameOfGpu = "Three solid choices: Gtx 1060 by Nvidia or the Rtx 550 by AMD, Rtx 580(if on sale)";
+                return costGpu;
 
             }
             if (budget >= 600 && budget < 900 ){
                 double costGpu = 330;
-                return costGpu;
                 nameOfGpu = "Four solid choices: RTX 3050, RTX 3060(if on sale), Rx 6600xt, Rx 6700xt(higher end)";
+                return costGpu;
             }
 
             if (budget >= 900 && budget < 1200){
                 double costGpu = 550;
-                return costGpu;
                 nameOfGpu = "Four solid options: Rtx 3070, Rx 6750xt,  Rtx 3060 Ti";
+                return costGpu;
             }
             if (budget >= 1200 ) {
                 double costGpu = 750;
-                return costGpu;
                 nameOfGpu = "Multiple solid options: Rx 6900xt or Rx 6950xt, Rtx 3080, Rtx 3090, Rtx 4090(VERY HIGH END)";
+                return costGpu;
 
             }
 
         }
         else {
            double costGPu = 80;
-           return costGPu;
-           nameOfGpu = "GT 710";
+            nameOfGpu = "GT 710";
+            return costGPu;
         }
-
+        nameOfGpu = "GT 710";
+        return 80;
     }
 
     public double getCpuPrice(){
@@ -88,29 +89,29 @@ public class PcSetupPricing {
         }
         if (budget < 600 && budget >= 300) {
             double costCpu = 100;
-            return costCpu;
             nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+            return costCpu;
 
         }
         if (budget >= 600 && budget < 900 ){
             double costCpu = 200;
+            nameOfCpu = "Four solid choices: Ryzen 5 5600, Ryzen 5700x, Intel i5 12400, Ryzen 7 5700g  ";
             return costCpu;
-            nameOfCpu = "Four solid choices: Ryzen 5 5600, Ryzen 5700x, Intel i5 12400, Ryzen 7 5700g  "
         }
 
         if (budget >= 900 && budget < 1200){
             double costCpu = 300;
-            return costCpu;
             nameOfCpu = "Two solid options: Ryzen 5 7600x, Ryzen 7 5800x, ";
+            return costCpu;
         }
         if (budget >= 1200 ) {
             double costCpu = 550;
-            return costCpu;
             nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+            return costCpu;
 
         }
-        return 100;
         nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+        return 100;
 
     }
 
@@ -121,6 +122,7 @@ public class PcSetupPricing {
     }
     public double getPowerSupplyPrice(){
     double costPowerSupply = 80;
+    return costPowerSupply;
     }
 
     public double getCaseCost(){
@@ -129,47 +131,48 @@ public class PcSetupPricing {
         }
         if (budget < 600 && budget >= 300) {
             double costPower= 40;
-            return costPower;
             nameOfPowerSupply = "500";
+            return costPower;
 
         }
         if (budget >= 600 && budget < 900 ){
             double costCpu = 50;
+            nameOfPowerSupply = "550 watt power supply";
             return costCpu;
-            nameOfPowerSupply = "550 watt power supply"
         }
 
         if (budget >= 900 && budget < 1200){
             double costCpu = 60;
-            return costCpu;
             nameOfPowerSupply = "600 watt power supply";
+            return costCpu;
         }
         if (budget >= 1200 ) {
             double costCpu = 80;
-            return costCpu;
             nameOfPowerSupply = " 750 watt powers supply(preferably high rated brands such as seasonic) ";
+            return costCpu;
 
         }
-        return 50;
         nameOfPowerSupply = "500 watts";
+        return 50;
 
     }
 
     public double getRamCost(){
 
         if (budget >= 900 && budget < 1200){
-            double costCpu = 300;
-            return costCpu;
-            nameO = "Two solid options: Ryzen 5 7600x, Ryzen 7 5800x, ";
-        }
-        if (budget >= 1200 ) {
-            double costCpu = 550;
-            return costCpu;
-            nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+            double cost = 300;
+            nameOfRam = "8 gb of ram";
+            return cost;
 
         }
+        if (budget >= 1200 ) {
+            double cost = 550;
+            nameOfRam = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+            return cost;
+
+        }
+        nameOfRam = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
         return 100;
-        nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
 
     }
 
