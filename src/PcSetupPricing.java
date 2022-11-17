@@ -1,5 +1,5 @@
 public class PcSetupPricing {
-    private double budget;
+    public double budget;
     private double averageCostOfDesk = 125;
     private double averageCostOfChair = 80;
     private double averageCostOfKeyboard = 45;
@@ -17,7 +17,7 @@ public class PcSetupPricing {
 
     private String nameOfRam;
 
-    public PcSetupPricing(int userBudget, String setup) {
+    public PcSetupPricing(double userBudget, String setup) {
         this.budget = userBudget;
         while(budget<300){
             budget++;
