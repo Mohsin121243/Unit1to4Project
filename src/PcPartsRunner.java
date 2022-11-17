@@ -11,6 +11,7 @@ public class PcPartsRunner {
         double newBudget = Double.parseDouble(initialBudget);
         PcSetupPricing a = new PcSetupPricing(newBudget, setup);
         System.out.println("Budget with tax and tax reducted" + a.budget);
+
     }
 }
 

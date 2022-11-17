@@ -83,6 +83,7 @@ public class PcSetupPricing {
         return 80;
     }
 
+    
     public double getCpuPrice(){
         if (budget < 300){
             nameOfCpu = "Budget too low";
@@ -156,6 +157,7 @@ public class PcSetupPricing {
         return 50;
 
     }
+
 
     public double getRamCost(){
 
