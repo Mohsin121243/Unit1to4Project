@@ -49,24 +49,24 @@ public class PcSetupPricing {
             if (budget < 300){
                 nameOfGpu = "Budget too low";
             }
-            if (budget < 600 && budget >= 300) {
+            else if (budget < 600 && budget >= 300) {
                 double costGpu = 125;
                 nameOfGpu = "Three solid choices: Gtx 1060 by Nvidia or the Rtx 550 by AMD, Rtx 580(if on sale)";
                 return costGpu;
 
             }
-            if (budget >= 600 && budget < 900 ){
+            else if (budget >= 600 && budget < 900 ){
                 double costGpu = 330;
                 nameOfGpu = "Four solid choices: RTX 3050, RTX 3060(if on sale), Rx 6600xt, Rx 6700xt(higher end)";
                 return costGpu;
             }
 
-            if (budget >= 900 && budget < 1200){
+            else if (budget >= 900 && budget < 1200){
                 double costGpu = 550;
                 nameOfGpu = "Four solid options: Rtx 3070, Rx 6750xt,  Rtx 3060 Ti";
                 return costGpu;
             }
-            if (budget >= 1200 ) {
+            else if (budget >= 1200 ) {
                 double costGpu = 750;
                 nameOfGpu = "Multiple solid options: Rx 6900xt or Rx 6950xt, Rtx 3080, Rtx 3090, Rtx 4090(VERY HIGH END)";
                 return costGpu;
@@ -121,18 +121,16 @@ public class PcSetupPricing {
         nameOfMotherboard = "Ryzen Motherboards: B550(for 5000 series chips) and B450(for 3000 series chips), Intel motherboards: z790 or z690";
         return costMotherBoard;
     }
-    public double getPowerSupplyPrice(){
-    double costPowerSupply = 80;
-    return costPowerSupply;
-    }
 
-    public double getCaseCost(){
+
+
+    public double getPowerSupplyCost(){
         if (budget < 300){
             nameOfCpu = "Budget too low";
         }
         if (budget < 600 && budget >= 300) {
             double costPower= 40;
-            nameOfPowerSupply = "500";
+            nameOfPowerSupply = "500 watt power supply";
             return costPower;
 
         }
@@ -178,4 +176,39 @@ public class PcSetupPricing {
 
     }
 
+    public void getCase(){
+        int random = (int)((Math.random()*5)+1);
+        String caseName;
+        if(random == 1){
+            caseName = "Corsair iCue RGB 5000x";
+        }
+        else if(random == 2){
+            caseName = "Corsair Carbide Series SPEC-04 Tempered Glass ";
+        }
+        else if (random == 3) {
+            caseName = "Nzxt H510";
+        }
+        else if (random == 4) {
+            caseName = "Cooler Master H500P Mesh";
+        }
+        else if (random == 5) {
+            caseName = "Lian Li Lancool 2 mesh";
+        }
+        else  {
+            caseName = "Cooler Master Cosmos C700M";
+        }
+    nameOfCase = caseName;
+    }
+
+    public String toString(){
+      String cpu = "CPU Options: " + nameOfCpu;
+      String gpu = "GPU Options: " + nameOfGpu;
+      String power = "Power Supply: " + nameOfPowerSupply;
+      String ram = "Ram options: " + nameOfRam;
+      String caseName = "Case: " + nameOfCase;
+      String motherBoard = "MotherBoard options: " + nameOfMotherboard;
+
+      return cpu + "\n" + gpu + "\n" + ram + "\n" + motherBoard + "\n" + power + "\n" + caseName;
+
+    }
 }
