@@ -4,6 +4,7 @@ public class PcPartsRunner {
         Scanner s = new Scanner(System.in);
         System.out.println("Welcome to the PcPartsConfigurator! In this program we will give you options for pc parts bases on your budget.");
         System.out.println("Note that the prices given are rough estimates of the current prices of pc parts due to the fluctuations in prices");
+        System.out.println("PLEASE CHOOSE A BUDGET OVER $300!!!");
         System.out.println("");
 
         System.out.print("What is your budget? ");

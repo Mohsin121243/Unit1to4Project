@@ -90,7 +90,7 @@ public class PcSetupPricing {
         }
         if (budget < 600 && budget >= 300) {
             double costCpu = 100;
-            nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+            nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  ";
             return costCpu;
 
         }
@@ -107,11 +107,11 @@ public class PcSetupPricing {
         }
         if (budget >= 1200 ) {
             double costCpu = 550;
-            nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+            nameOfCpu = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x";
             return costCpu;
 
         }
-        nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+        nameOfCpu = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500";
         return 100;
 
     }
@@ -119,6 +119,9 @@ public class PcSetupPricing {
     public double getMotherBoard(){
         double costMotherBoard =100;
         nameOfMotherboard = "Ryzen Motherboards: B550(for 5000 series chips) and B450(for 3000 series chips), Intel motherboards: z790 or z690";
+        if (budget < 300){
+            nameOfMotherboard = "Budget too low";
+        }
         return costMotherBoard;
     }
 
@@ -158,27 +161,34 @@ public class PcSetupPricing {
 
 
     public double getRamCost(){
+        if (budget < 300){
+            nameOfRam = "Budget too low";
+        }
 
-        if (budget >= 900 && budget < 1200){
+        if (budget >= 600 && budget < 1200){
             double cost = 300;
-            nameOfRam = "8 gb of ram";
+            nameOfRam = "16 gb of ram";
             return cost;
 
         }
         if (budget >= 1200 ) {
             double cost = 550;
-            nameOfRam = "Multiple solid options: i9 12900k, i9 12900kf, Ryzen 9 5900x,  ";
+            nameOfRam = "32 gb of ram";
             return cost;
 
         }
-        nameOfRam = "Three solid choices: i3 9100f, Ryzen 5 3600, Amd 5 5500,  )";
+        nameOfRam = "8 gb of ram";
         return 100;
 
     }
 
     public void getCase(){
+
         int random = (int)((Math.random()*5)+1);
         String caseName;
+        if (budget < 300){
+            caseName = "Budget too low";
+        }
         if(random == 1){
             caseName = "Corsair iCue RGB 5000x";
         }
