@@ -207,13 +207,13 @@ public class PcSetupPricing {
         }
 
         if (budget >= 600 && budget < 1200){
-            double cost = 300;
+            double cost = 80;
             nameOfRam = "16 gb of ram";
             return cost;
 
         }
         if (budget >= 1200 ) {
-            double cost = 550;
+            double cost = 110;
             nameOfRam = "32 gb of ram";
             return cost;
 
