@@ -3,7 +3,7 @@
  * and lists out the different options
  */
 public class PcSetupPricing {
-    public double budget;
+    private double budget;
     private double averageCostOfDesk = 125;
     private double averageCostOfChair = 80;
     private double averageCostOfKeyboard = 45;
@@ -52,6 +52,14 @@ public class PcSetupPricing {
 
             }
         }
+    }
+
+    /**
+     * Returns the instance variable budget which its value was set by the constructor
+     * @return returns the instance variable budget
+     */
+    public double getBudget(){
+        return budget;
     }
 
     /**

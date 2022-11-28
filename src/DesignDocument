@@ -1,6 +1,6 @@
 PcSetupPricing
 
-public double budget;
+private double budget;
 
 private double averageCostOfDesk = 125;
 private double averageCostOfChair = 80;
@@ -26,6 +26,7 @@ Constructor:
 Takes the input budget as a parameter and takes out the tax added to the build. Takes out the expenses for the setup(keyboard,table,mouse,etc). Which would approximately be worth 1/4th the budget. The user gets to choose whether they’d like to buy the setup portion or not.
 
 Methods:
+getBudget() - returns the instance variable budget
 getGpuPrice() - depending on the budget, the method picks the best motherboard at the price point listed
 
 getCpuPrice() - calculates the perfect price for the cpu based on your budget and stores the cpu options in the instance variables

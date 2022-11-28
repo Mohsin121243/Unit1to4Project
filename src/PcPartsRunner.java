@@ -29,7 +29,7 @@ public class PcPartsRunner {
         double newBudget = Double.parseDouble(initialBudget);
 
         PcSetupPricing a = new PcSetupPricing(newBudget, setup);
-        System.out.println("Budget with tax and tax reducted " + "$" + a.budget);
+        System.out.println("Budget with tax and tax reducted " + "$" + a.getBudget());
 
         System.out.print("Here is the cpu price: $");
         System.out.println(a.getCpuPrice());
