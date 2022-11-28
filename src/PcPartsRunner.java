@@ -11,7 +11,7 @@ public class PcPartsRunner {
         String initialBudget = s.nextLine();
         System.out.println("");
 
-        System.out.print("Would you like to include an entire setup? Type yes or no: ");
+        System.out.print("Would you like to include an entire setup?(including keyboard,a mouse, and a desk) Type yes or no: ");
         String setup = s.nextLine();
         System.out.println("");
 

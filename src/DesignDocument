@@ -1,0 +1,57 @@
+PcSetupPricing
+
+public double budget;
+
+private double averageCostOfDesk = 125;
+private double averageCostOfChair = 80;
+private double averageCostOfKeyboard = 45;
+private double averageCostOfMouse = 30;
+
+private String nameOfGpu;
+
+private String nameOfCpu;
+
+private String nameOfMotherboard;
+
+private String nameOfPowerSupply;
+
+private String nameOfCase;
+
+private String nameOfRam;
+
+
+
+Constructor:
+ PcSetupPricing(double userBudget. String setup)
+Takes the input budget as a parameter and takes out the tax added to the build. Takes out the expenses for the setup(keyboard,table,mouse,etc). Which would approximately be worth 1/4th the budget. The user gets to choose whether they’d like to buy the setup portion or not.
+
+Methods:
+getGpuPrice() - depending on the budget, the method picks the best motherboard at the price point listed
+
+getCpuPrice() - calculates the perfect price for the cpu based on your budget and stores the cpu options in the instance variables
+
+gpuMotherboard() - calculates the perfect price for the gpu based on your budget and the list of options in the instance variable are stores
+
+
+getPowerSupplyCost(realBudget)- calculates the best price point for your power supply and gives the power supply options to the instance variables
+
+getCase()- gives you a case price and a randomized case stored in the instance variables
+
+toString() - will return the instance variables stored Strings
+
+
+
+PcRunner
+
+The runner will use print statements and scanner to ask the user for his budget
+
+The runner will ask the user if they would like to play games
+
+The runner will ask the user if they'd like a full setup or not
+
+Will run the methods and present the parts using print statements
+
+
+
+
+

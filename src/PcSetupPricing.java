@@ -1,3 +1,7 @@
+/**
+ * The PcSetupPricing class takes all the user input and calculates the prices of the computer parts
+ * and lists out the different options
+ */
 public class PcSetupPricing {
     public double budget;
     private double averageCostOfDesk = 125;
@@ -17,6 +21,12 @@ public class PcSetupPricing {
 
     private String nameOfRam;
 
+    /**
+     * This constructor subtracts the tax out of the user budget. Also subtracts the cost of a setup(including keyboards
+     * , mouses, and a desk) if the user says so
+     * @param userBudget uses the users budget that was asked of him
+     * @param setup if the user preferred a setup or not
+     */
     public PcSetupPricing(double userBudget, String setup) {
         this.budget = userBudget;
         while(budget<300){
@@ -44,6 +54,12 @@ public class PcSetupPricing {
         }
     }
 
+    /**
+     * The method getGpuPrice calculates the price of the gpu based on the budget and lists out the options,
+     * options are stored in its dedicated instance variables
+     * @param games represents the users ansewer to the questions of whether they would like to play games or not
+     * @return returns the rough estimate of the price of the gpu
+     */
     public double getGpuPrice(String games){
         if(games.equals("yes")==true ||games.equals("Yes") == true) {
             if (budget < 300){
@@ -83,7 +99,11 @@ public class PcSetupPricing {
         return 80;
     }
 
-    
+    /**
+     * The getCpuPrice method calculates the rough price of the cpu and the list of options
+     * based on the budget, which as the same for the gpu is also stored in its distinct instance variable.
+     * @return returns the price of the cpu
+     */
     public double getCpuPrice(){
         if (budget < 300){
             nameOfCpu = "Budget too low";
@@ -116,6 +136,11 @@ public class PcSetupPricing {
 
     }
 
+    /**
+     * The getMotherboard method also calculates the cost based on the user budget and store the options in a instance
+     * varible
+     * @return returns the cost of the motherboard
+     */
     public double getMotherBoard(){
         double costMotherBoard =100;
         nameOfMotherboard = "Ryzen Motherboards: B550(for 5000 series chips) and B450(for 3000 series chips), Intel motherboards: z790 or z690";
@@ -126,7 +151,11 @@ public class PcSetupPricing {
     }
 
 
-
+    /**
+     * The getPowerSupplyCost calculates the cost of the power supply and stores the number of watts in its designated
+     * instance variable
+     * @return returns the price of the power supply
+     */
     public double getPowerSupplyCost(){
         if (budget < 300){
             nameOfCpu = "Budget too low";
@@ -159,7 +188,11 @@ public class PcSetupPricing {
 
     }
 
-
+    /**
+     * The getRamCost method calculates the cost of the ram and stores the number of gigabytes you need in its
+     * designated instance variable
+     * @return returns the cost of the ram
+     */
     public double getRamCost(){
         if (budget < 300){
             nameOfRam = "Budget too low";
@@ -182,6 +215,10 @@ public class PcSetupPricing {
 
     }
 
+    /**
+     * The getCase method uses Math.random to randomly choose one case out of a list of different cases and store it
+     * in its designated instance variable
+     */
     public void getCase(){
 
         int random = (int)((Math.random()*5)+1);
@@ -210,6 +247,11 @@ public class PcSetupPricing {
     nameOfCase = caseName;
     }
 
+    /**
+     * The toString method returns all the instance variables that were modified by the calling of the constructors and
+     * the methods. So it basically lists out all the options
+     * @return returns all the instance varibles/options.
+     */
     public String toString(){
       String cpu = "CPU Options: " + nameOfCpu;
       String gpu = "GPU Options: " + nameOfGpu;
