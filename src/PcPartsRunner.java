@@ -10,6 +10,13 @@ public class PcPartsRunner {
         System.out.print("What is your budget? ");
         String initialBudget = s.nextLine();
         System.out.println("");
+        double secondBudget = Double.parseDouble(initialBudget);
+        while(secondBudget <= 300){
+            System.out.print("Budget too low. Type a higher budget: ");
+            initialBudget = s.nextLine();
+            System.out.println("");
+            secondBudget = Double.parseDouble(initialBudget);
+        }
 
         System.out.print("Would you like to include an entire setup?(including keyboard,a mouse, and a desk) Type yes or no: ");
         String setup = s.nextLine();
